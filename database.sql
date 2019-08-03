@@ -2,7 +2,6 @@
 -- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
--- Host: sql.s14.vdl.pl
 -- Generation Time: Aug 03, 2019 at 06:37 PM
 -- Server version: 5.6.36-log
 -- PHP Version: 5.6.38
