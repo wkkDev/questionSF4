@@ -1,0 +1,42 @@
+body{
+    background: $bg-color;
+    font-family: $font-primary;
+    @include font(16px, $font-color, 400, normal);
+}
+
+section{
+    clear: both;
+    float: left;
+    width: 100%;
+    position: relative;
+}
+
+.main{
+    clear: both;
+    width: 1280px;
+    margin: 0 auto;
+}
+
+label{
+    margin-bottom: 5px;
+}
+
+.form-group ul li {
+    color: #ff0000;
+    margin: 10px 0px;
+}
+
+.btn{
+    padding: 5px 10px !important;
+}
+
+.flash-success{
+    position: relative;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}

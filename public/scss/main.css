@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,900&display=swap&subset=latin-ext");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+div, li, input, textarea, footer, header, span, a, small, h1, h2, h3, h4, h5, h6, article, aside, figure {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*
+span {
+    @include keyframes(animate) {
+      50% {
+        transform: rotate(90deg);
+      }
+      100% {
+        transform: rotate(-90deg);
+      }
+    }
+}
+*/
+body {
+  background: #fafafa;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  color: #454545;
+  font-weight: 400;
+  line-height: normal;
+}
+
+section {
+  clear: both;
+  float: left;
+  width: 100%;
+  position: relative;
+}
+
+.main {
+  clear: both;
+  width: 1280px;
+  margin: 0 auto;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+.form-group ul li {
+  color: #ff0000;
+  margin: 10px 0px;
+}
+
+.btn {
+  padding: 5px 10px !important;
+}
+
+.flash-success {
+  position: relative;
+  padding: .75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+
+.header {
+  background: #263238;
+}
+.header .navbar-dark .navbar-brand {
+  line-height: 29px;
+}
+.header .navbar-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menub {
+  line-height: 30px;
+}
+
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.text {
+  line-height: 30px;
+}
+
+.alert-home {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  text-align: center;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.carousel-caption {
+  background: rgba(255, 255, 255, 0.2);
+  bottom: 30px;
+}
+.carousel-caption h5 {
+  font-size: 3em;
+}
+.carousel-caption p {
+  font-size: 1em;
+}

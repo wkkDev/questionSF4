@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+{% block title %}Admin{% endblock %}
+{% block body %}
+  <div class="container pt-4 pb-4">
+      <h1 class="h1">List <small>items: {{ rows.getTotalItemCount }}</small></h1>
+      <table class="table table-bordered table-stripped table-hover">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>{{ knp_pagination_sortable(rows, 'Username', 'username') }}</th>
+            <th>Name</th>
+            <th>{{ knp_pagination_sortable(rows, 'Age', 'age') }}</th>
+            <th>{{ knp_pagination_sortable(rows, 'Date', 'date') }}</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in rows %}
+            <tr>
+              <td>{{ item.id }}</td>
+              <td>{{ item.username }}</td>
+              <td>{{ item.name }}</td>
+              <td>{{ item.age }}</td>
+              <td>{{ item.date|date('d-m-Y H:i:s') }}</td>
+              <td align="center">
+                <a class="btn btn-danger" href="/delete/{{ item.id }}" data-id="{{ item.id }}">Delete</a>
+                <a class="btn btn-primary" href="/edit/{{ item.id }}">Edit</a>
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <div class="navigation">
+        {{ knp_pagination_render(rows) }}
+      </div>
+  </div>
+{% endblock %}
+{% block javascripts %}
+{% endblock %}

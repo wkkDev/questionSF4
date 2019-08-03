@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Questionnaire{% endblock %}
+
+{% block body %}
+
+<div class="container col-md-4 col-sm-12 pt-4 pb-4">
+  <h1 class="h1">Questionnaire</h1>
+  {% if is_granted("ROLE_USER") %}
+    {{form_start(form, {'attr': {'novalidate':'true'}})}}
+        {% for type, messages in app.session.flashbag.all() %}
+          {% for msg in messages %}
+            <div class="alert alert-{{ type }}">{{ msg }}</div>
+          {% endfor %}
+        {% endfor %}
+
+        <div class="form-group">
+          {{ form_label(form.name)}}
+          {{ form_errors(form.name) }}
+          {{ form_widget(form.name) }}
+        </div>
+        <div class="form-group">
+          {{ form_label(form.age)}}
+          {{ form_errors(form.age) }}
+          {{ form_widget(form.age) }}
+        </div>
+    {{form_end(form)}}
+{% else %}
+  <div class="alert alert-danger" role="alert">
+    You must be logged in
+  </div>
+  <a href="/login" type="button" class="btn btn-danger">Login</a>
+  <a href="/register" type="button" class="btn btn-primary">Register</a>
+  </div>
+{% endif %}
+</div>
+{% endblock %}
+{% block javascripts %}
+{% endblock %}
+
