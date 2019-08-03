@@ -1,7 +1,5 @@
 <?php
-
 namespace App\Controller;
-
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -12,7 +10,6 @@ use App\Form\QuestionForm;
 use App\Entity\Questionnaire;
 
 class QuestionController extends Controller {
-
 
     /**
      * @Route("/questionnaire", name="questionnaire")
@@ -63,4 +60,3 @@ class QuestionController extends Controller {
       ));
     }
 }
-
