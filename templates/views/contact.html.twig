@@ -1,37 +1,30 @@
 {% extends 'base.html.twig' %}
-
 {% block title %}Contact{% endblock %}
-
-
 {% block body %}
   <div class="container pt-4 pb-4">
     <h1 class="h1">Formularz kontaktowy</h1>
-
-      {{form_start(form, {'attr': {'novalidate':'true'}})}}
-
-        {% for type, messages in app.session.flashbag.all() %}
-          {% for msg in messages %}
-            <div class="alert alert-{{ type }}">{{ msg }}</div>
-          {% endfor %}
+    {{form_start(form, {'attr': {'novalidate':'true'}})}}
+      {% for type, messages in app.session.flashbag.all() %}
+        {% for msg in messages %}
+          <div class="alert alert-{{ type }}">{{ msg }}</div>
         {% endfor %}
-
-        <div class="form-group">
-          {{ form_label(form.name)}}
-          {{ form_errors(form.name) }}
-          {{ form_widget(form.name) }}
-        </div>
-        <div class="form-group">
-          {{ form_label(form.email)}}
-          {{ form_errors(form.email) }}
-          {{ form_widget(form.email) }}
-        </div>
-        <div class="form-group">
-          {{ form_label(form.content)}}
-          {{ form_errors(form.content) }}
-          {{ form_widget(form.content) }}
-        </div>
-      {{form_end(form)}}
-</div>
+      {% endfor %}
+      <div class="form-group">
+        {{ form_label(form.name)}}
+        {{ form_errors(form.name) }}
+        {{ form_widget(form.name) }}
+      </div>
+      <div class="form-group">
+        {{ form_label(form.email)}}
+        {{ form_errors(form.email) }}
+        {{ form_widget(form.email) }}
+      </div>
+      <div class="form-group">
+        {{ form_label(form.content)}}
+        {{ form_errors(form.content) }}
+        {{ form_widget(form.content) }}
+      </div>
+    {{form_end(form)}}
+  </div>
 {% endblock %}
-{% block javascripts %}
-{% endblock %}
+{% block javascripts %}{% endblock %}
