@@ -1,17 +1,12 @@
 <?php
-
 namespace App\Controller;
-
 use App\Entity\Contact;
 use App\Form\ContactType;
-
-
 use Symfony\Component\HttpFoundation\Request;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
-
 
 class MainController extends Controller {
 
@@ -69,5 +64,4 @@ class MainController extends Controller {
 
         return $this->render('views/contact.html.twig', ['form' => $form->createView()]);
     }
-
 }
