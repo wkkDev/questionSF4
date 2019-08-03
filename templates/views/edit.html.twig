@@ -1,22 +1,19 @@
 {% extends 'base.html.twig' %}
-
 {% block title %}edit{% endblock %}
-
-
 {% block body %}
   <div class="container col-md-4 col-sm-12 pt-4 pb-4">
-        <h1 class="h1">Edit</h1>
-        {{form_start(form, {'attr': {'novalidate':'true'}})}}
-          <div class="form-group">
-            {{ form_label(form.name)}}
-            {{ form_widget(form.name) }}
-            {{ form_errors(form.name) }}
-          </div>
-          <div class="form-group">
-            {{ form_label(form.age)}}
-            {{ form_widget(form.age) }}
-            {{ form_errors(form.age) }}
-          </div>
-        {{form_end(form)}}
+    <h1 class="h1">Edit</h1>
+    {{form_start(form, {'attr': {'novalidate':'true'}})}}
+      <div class="form-group">
+        {{ form_label(form.name)}}
+        {{ form_widget(form.name) }}
+        {{ form_errors(form.name) }}
+      </div>
+      <div class="form-group">
+        {{ form_label(form.age)}}
+        {{ form_widget(form.age) }}
+        {{ form_errors(form.age) }}
+      </div>
+    {{form_end(form)}}
   </div>
 {% endblock %}
