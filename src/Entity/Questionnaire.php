@@ -2,14 +2,12 @@
 
 namespace App\Entity;
 use Symfony\Component\Validator\Constraints as Assert;
-
 use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\QuestionnaireRepository")
  */
-class Questionnaire
-{
+class Questionnaire {
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
