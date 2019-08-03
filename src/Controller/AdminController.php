@@ -1,12 +1,10 @@
 <?php
 
 namespace App\Controller;
-
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
-
 use Symfony\Component\HttpFoundation\Request;
 use Knp\Component\Pager\PaginatorInterface;
 
@@ -14,8 +12,6 @@ use App\Entity\Questionnaire;
 use App\Form\QuestionForm;
 
 class AdminController extends Controller {
-
-
     /**
      * @Route("/admin", name="admin")
      */
@@ -88,4 +84,3 @@ class AdminController extends Controller {
       ));
     }
 }
-
